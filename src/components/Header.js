@@ -3,34 +3,30 @@ import './Header.css'
 import {useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import SearchIcon from '@mui/icons-material/Search';
-import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Header() {
 
-    const [cursor, setCursor] = useState('pointer');
-
-        const changeCursor = () => {
-            setCursor(prevState => {
-                return 'pointer';
-            })
-            return 'crosshair';
-        }
+    const [cursor] = useState('pointer');
     let navigate = useNavigate();
+
   return (
     <div className='header'>
         <h1 className='logo' style={{cursor}} onClick={() => {
             navigate("/");}}
             >unknown</h1>
         <div className='header__center'>
-            <input type="text" />
+            <input className='search__text' type="text" />
             <SearchIcon />
         </div>
 
         <div className='header__right'>
-            <p>
-                Info
-                <AccessibilityNewIcon/>
+            <p style={{cursor}} onClick={() => {
+            navigate("/Login");}}>
+                sign in
             </p>
+                <AccountCircleIcon style={{cursor}} onClick={() => {
+            navigate("/Login");}}/>
         </div>
     </div>
   )

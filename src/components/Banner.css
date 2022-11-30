@@ -8,10 +8,10 @@
 .banner__info {
     background-color: black;
     color: white;
-    padding-top: 25vh;
+    padding-top: 13vh;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 5vh;
     width: 300px;
 }
 .banner__search {

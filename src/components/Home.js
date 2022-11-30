@@ -17,7 +17,15 @@ function Home() {
             title='Pop'/>
             <Card src={'https://images.unsplash.com/photo-1575672913784-11a7cd4f25f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHVua3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'}
             title='Punk'/>
-        </div>
+            </div>
+            <div className='home__section'>
+              <Card src={'https://images.unsplash.com/photo-1587731556938-38755b4803a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60'}
+            title='Indie'/>
+              <Card src={'https://images.unsplash.com/photo-1477927849362-0fb1e7d59ee6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cm9jayUyMG11c2ljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'}
+            title='Rock'/>
+              <Card src={'https://images.unsplash.com/photo-1506091403742-e3aa39518db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWV0YWwlMjBtdXNpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'}
+            title='Metal'/>
+            </div>
     </div>
   )
 }

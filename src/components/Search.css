@@ -37,7 +37,7 @@
     top: 480px;
     text-transform: inherit !important;
     background-color: gray;
-    color: white;
+    color: white !important;
     width: 579px;
   }
 

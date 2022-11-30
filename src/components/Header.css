@@ -14,6 +14,16 @@
     background-color: lightslategray;
 }
 
+.header__right {
+    display: flex;
+    font-family: "Kilo", sans-serif;
+    font-size: small;
+    align-items: center;
+    justify-content: space-between;
+    width: 15vw;
+    margin-right: 20px;
+}
+
 .logo {
     font-family: "Kilo", sans-serif;
     font-size: small;
@@ -27,22 +37,14 @@
     max-width: fit-content;
     padding: 10px;
    height: 20px;
-   border: 1px solid lightgray;
+   border: 10px solid lightgray;
    border-radius: 999px;
 }
 
-.header__center > input {
+.header__center > .search__text {
     border: none;
     padding: 10px;
-    outline-width: 0;
+    outline-width: 1;
     background-color: lightslategray;
     /* width: 200px; */
-}
-
-.header__right {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 15vw;
-    margin-right: 80px;
 }

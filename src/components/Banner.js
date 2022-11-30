@@ -29,7 +29,7 @@ function Banner() {
             <h5>See posts from local artists such as release dates, tours, merch, etc.</h5>
             <Button variant='outlined' onClick={() => {
             navigate("/Search");}}>
-                Explore Artists
+                Explore Artist Posts
             </Button> 
         </div>
     </div>
