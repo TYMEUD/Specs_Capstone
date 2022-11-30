@@ -1,0 +1,28 @@
+{
+    "posts" : 
+    [
+        {
+            "id": 1,
+            "title" : "1st post",
+            "body" : "info"
+        },
+
+        {
+            "id": 2,
+            "title" : "1st post",
+            "body" : "info"
+        },
+
+        {
+            "id": 3,
+            "title" : "1st post",
+            "body" : "info"
+        },
+
+        {
+            "id": 4,
+            "title" : "1st post",
+            "body" : "info"
+        }
+    ]
+}

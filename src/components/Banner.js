@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Banner.css'
 import {Button} from "@mui/material"
-import {useState} from 'react'
 import Search from './Search'
+import {useNavigate} from 'react-router-dom'
 
 function Banner() {
+    const navigate = useNavigate();
     const [showSearch, setShowSearch] = useState 
     (false);
 
@@ -16,15 +17,20 @@ function Banner() {
             <Button onClick={() => 
             setShowSearch(!showSearch)}
             className='banner__searchButton' 
-            variant='outlined'>Search Dates
+            variant='outlined'>
+
+                {showSearch
+                ? "Hide" :
+                "Search Dates"}
             </Button>
         </div>
         <div className='banner__info'>
             <h1>Explore your favorite local artists</h1>
             <h5>See posts from local artists such as release dates, tours, merch, etc.</h5>
-            <Button variant='outlined'>
+            <Button variant='outlined' onClick={() => {
+            navigate("/Search");}}>
                 Explore Artists
-            </Button>
+            </Button> 
         </div>
     </div>
   )
