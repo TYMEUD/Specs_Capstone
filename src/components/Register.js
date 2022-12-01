@@ -7,7 +7,8 @@ import axios from '../api/axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = '/register';
+const {SERVER_PORT} = process.env
+const REGISTER_URL = `https://localhost:${SERVER_PORT}/`;
 
 const Register = () => {
 
@@ -66,6 +67,19 @@ const Register = () => {
                     withCredentials: true
                 }
             );
+
+            // const handleAuth = (e) => {
+            //     e.preventDefault()
+            //     const body = {username, password, email, spotifyId}
+            //     axios.post(`${register ? `/register` : '/login'}`, body)
+            //       .then(res => {
+            //         console.log(res.data)
+            //         const {token, exp, userId, email, spotifyId, username} = res.data
+            //         authCtx.login(token, exp, userId, email, SpotifyId, username)
+            //       })
+            //       .catch(err => console.log(err))
+            //   }
+
             // TODO: remove console.logs before deployment
             console.log(JSON.stringify(response?.data));
             //console.log(JSON.stringify(response))
@@ -75,6 +89,8 @@ const Register = () => {
             setPwd('');
             setMatchPwd('');
         } catch (err) {
+            console.log(err)
+            console.log(err.response)
             if (!err?.response) {
                 setErrMsg('No Server Response');
             } else if (err.response?.status === 409) {

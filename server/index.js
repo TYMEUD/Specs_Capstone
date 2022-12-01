@@ -22,9 +22,15 @@ SavedPosts.belongsTo(User)
 SavedPosts.belongsTo(Post)
 
 const {register, login} = require ('./controllers/authCtrl')
+const {isAuthenticated} = require ('./middleware/isAuthorized')
+const {addPost} = require ('./controllers/posts')
 
+//user endpoints
 app.post('/register',  register)
 app.post('/login', login)
+
+//post
+// app.post('/posts/:userId', addPost)
 
 sequelize.sync()
 .then(() => {
