@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchPage.css';
 import { Button } from "@mui/material";
-import SearchResult from "./SearchResult"
+import Posts from "./Posts"
 // import SearchResult from "./SearchResult";
 
 function SearchPage() {
@@ -14,7 +14,7 @@ function SearchPage() {
                 <Button variant="outlined">Songs</Button>
                 <Button variant="outlined">More filters</Button>
             </div> 
-            <SearchResult/>      
+            <Posts/>      
         </div>
     )
 }

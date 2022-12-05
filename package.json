@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "main": "server/index.js",
-  "proxy": "http://localhost:4545",
+  "proxy": "http://localhost:8100",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.10.5",

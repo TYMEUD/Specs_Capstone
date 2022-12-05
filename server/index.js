@@ -23,14 +23,15 @@ SavedPosts.belongsTo(Post)
 
 const {register, login} = require ('./controllers/authCtrl')
 const {isAuthenticated} = require ('./middleware/isAuthorized')
-const {addPost} = require ('./controllers/posts')
+const {addPost, deletePost, getAllPosts} = require ('./controllers/posts')
 
 //user endpoints
 app.post('/register',  register)
 app.post('/login', login)
-
+app.post('/posts/:userId', addPost)
+app.delete('/posts', deletePost)
+app.get('/posts', getAllPosts)
 //post
-// app.post('/posts/:userId', addPost)
 
 sequelize.sync()
 .then(() => {
